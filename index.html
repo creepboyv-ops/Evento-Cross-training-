@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Evento Cross Training - Nilda Lima</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+    .gradient-bg {
+      background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    }
+    .yellow-glow {
+      box-shadow: 0 0 20px rgba(255, 193, 7, 0.3);
+    }
+    .hover-scale {
+      transition: transform 0.3s ease;
+    }
+    .hover-scale:hover {
+      transform: scale(1.05);
+    }
+    .pulse-animation {
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
+    }
+    .product-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+    .payment-method.active {
+      border-color: #fbbf24;
+      background-color: rgba(251, 191, 36, 0.1);
+    }
+  </style>
+</head>
+
+<body class="gradient-bg text-white min-h-screen">
+
+  <div class="container mx-auto px-4 py-6 max-w-md">
+    <!-- Header -->
+    <header class="text-center mb-6">
+      <h1 class="text-3xl font-bold mb-4 yellow-glow">CROSS TRAINING</h1>
+      <p class="text-xl text-gray-300">Pulseira Exclusiva</p>
+    </header>
+
+    <!-- Event Image -->
+    <div class="mb-6">
+      <img src="00f13b34-203b-43b8-80ab-12e7eeae30a8.jpeg" alt="Evento Nilda Lima" class="product-image" />
+    </div>
+
+    <!-- Payment Section -->
+    <div class="bg-gray-900 p-6 rounded-2xl border border-gray-700">
+      <h2 class="text-2xl font-bold mb-6 text-yellow-400">Finalizar Compra</h2>
+
+      <!-- Price -->
+      <div class="text-center mb-6">
+        <span class="text-4xl font-bold text-yellow-400">R$ 31,00</span>
+      </div>
+
+      <!-- Payment Methods -->
+      <div class="mb-6">
+        <h3 class="text-lg font-semibold mb-4">Forma de Pagamento</h3>
+        <div class="space-y-3">
+          <div class="payment-method border-2 border-gray-600 p-4 rounded-lg active">
+            <div class="flex items-center">
+              <input type="radio" name="payment" id="pix" class="mr-3" checked>
+              <label for="pix" class="flex items-center cursor-pointer">
+                <span class="text-2xl mr-3">📱</span>
+                <span>PIX</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PIX Info -->
+      <div class="text-center mb-6">
+        <div class="bg-gray-800 p-4 rounded-lg">
+          <p class="text-yellow-400 font-semibold mb-2">Pagamento via PIX</p>
+          <p class="text-sm text-gray-300">Após clicar em "Comprar", você será redirecionado para o link de pagamento.</p>
+        </div>
+      </div>
+
+      <!-- Delivery Info -->
+      <div class="bg-gray-800 p-4 rounded-lg mb-6 text-center">
+        <div class="flex items-center justify-center mb-2">
+          <span class="text-yellow-400 text-xl mr-2">🚚</span>
+          <span class="font-semibold text-yellow-400">Entrega</span>
+        </div>
+        <p class="text-sm text-gray-300">15 de Novembro de 2024</p>
+      </div>
+
+      <!-- Buy Button -->
+      <a href="https://go.perfectpay.com.br/PPU38CQ1LSG" target="_blank"
+         class="block text-center bg-yellow-400 text-black py-4 rounded-xl font-bold text-lg hover-scale yellow-glow pulse-animation">
+        COMPRAR PULSEIRA
+      </a>
+    </div>
+  </div>
+</body>
+</html>
